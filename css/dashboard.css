@@ -1,0 +1,28 @@
+body
+{
+    font-family: 'Lato', sans-serif;
+}
+#dashboard_back
+{
+    background-color: #26272b;
+    height: 100vh;
+}
+#welcome
+{
+    text-align: center;
+    border-bottom: 2px solid #33353d;
+    font-size: 36px;
+    color: #26272b;
+    padding: 5px;
+
+}
+nav a
+{
+    color: white;
+    text-align: center;
+}
+nav a:hover
+{
+    background-color: #33353d;
+    color: white;
+}

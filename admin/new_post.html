@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dashboard</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div id="dashboard_back" class="col-md-3">
+            <nav class="nav flex-column">
+                <ul class="navbar-nav mt-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html"><span class="fa fa-home"></span> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html"><span class="fa fa-folder"></span> Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="details.html"><span class="fa fa-user"></span> Details</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fa fa-file"></span> Post
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">New Post</a>
+                            <a class="dropdown-item" href="modify_post.html">Modify Post</a>
+                            <a class="dropdown-item" href="desclaimer.html">Disclaimer</a>
+                            <a class="dropdown-item" href="high-risk-warning.html">High Risk Warning</a>
+                            <a class="dropdown-item" href="privacy_policy.html">Privacy policy</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fa fa-cogs"></span> Settings
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="change_username.html">Change Username</a>
+                            <a class="dropdown-item" href="change_password.html">Change Password</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="../index.html"><span class="fa fa-globe"></span> Visit Website</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="fa fa-power-off"></span> Logout</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <!--this is main body of dashboard-->
+        <div class="col-md-9">
+            <div class="container">
+                <h2 class="mt-3"> <span class="fa fa-file"></span> New Post</h2>
+            </div>
+            <div class="container">
+                <form>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="postTitle">Post Title</label>
+                                <input type="text" class="form-control" id="postTitle">
+                            </div>
+                            <div class="form-group">
+                                <label for="postImage">Post Image</label>
+                                <input type="file" class="form-control" id="postImage">
+                            </div>
+                            <div class="form-group">
+                                <label for="videoLink">Video Link</label>
+                                <input type="text" class="form-control" id="videoLink">
+                            </div>
+                            <div class="form-group">
+                                <label for="keyword">Keywords</label>
+                                <input type="text" class="form-control" id="keyword">
+                            </div>
+                            <div class="form-group">
+                                <label for="descriptionTags">Description Tags</label>
+                                <input type="text" class="form-control" id="descriptionTags">
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Select Category</label>
+                                <select class="form-control" name="" id="category">
+                                    <option hidden value="">---Select---</option>
+                                    <option value="">Forex Basic Learning</option>
+                                    <option value="">Forex Advance Learning</option>
+                                    <option value="">Forex Trading Psychology</option>
+                                    <option value="">Strategies</option>
+                                    <option value="">Trade Ideas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="article">Article</label><br>
+                                <span class="btn btn-info badge badge-info text-wrap" onclick="heading()"  style="width: 6rem;">Heading</span>
+                                <span class="btn btn-info badge badge-info text-wrap" onclick="link()" style="width: 6rem;">Link</span>
+                                <span class="btn btn-info badge badge-info text-wrap" onclick="lineBreak()" style="width: 6rem;">Line Break</span>
+                                <span class="btn btn-info badge badge-info text-wrap" onclick="image()" style="width: 6rem;">Image</span>
+                                <span class="btn btn-info badge badge-info text-wrap" onclick="italic()" style="width: 6rem;"><i>Italic</i></span>
+                                <span class="btn btn-info badge badge-info text-wrap" onclick="boldFont()" style="width: 6rem;"><b>Bold</b></span>
+                                <span class="btn btn-info badge badge-info text-wrap" onclick="underline()" style="width: 6rem;"><u>Underline</u></span>
+                                <span class="btn btn-info badge badge-info text-wrap" onclick="unorderlist()" style="width: 6rem;">Unorder List</span>
+                                <span class="btn btn-info badge badge-info text-wrap" onclick="orderlist()" style="width: 6rem;">Order List</span>
+                                <textarea class="form-control mt-3" name="" id="article" cols="30" rows="15"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Post</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../js/text-handle.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
